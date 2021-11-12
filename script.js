@@ -1,15 +1,27 @@
+let num;
+
 $(function(){
     $('#countUp').keyup(function(){
-        $('#count1').text($(this).val().length);
+        $('#c1').text($(this).val().length);
     });
     $('#countDown').keyup(function(){
-        var remain = 30 - $(this).val().length;
+        //var val = $('#myform [name=my-number]').val();
+        //var val = $('#myform [name=my-text]').val();
+        //var val = Number(valText) || 0;
+        //let num = parseInt(val, 10);
+        var remain = 140 - $(this).val().length;
 
-        $('#count2').text(remain);
+        $('#c2').text(remain);
         if (remain < 0) {
-            $('#count2').css('color', 'red');
+            $('#c2').css('color', 'red');
         } else {
-            $('#count2').css('color', 'grey');
+            $('#c2').css('color', 'grey');
         }
     });
+    /*$('#cnumber').keyup(function(){
+        var val = $('#myform [name=my-number]').val();
+        var val = Number(valText) || 0; 
+        num = parseInt(val, 10);
+        $('#c2').text(num);
+    });*/
 });
